@@ -58,7 +58,5 @@ COPY root/ /
 COPY --from=unrar /usr/bin/unrar-alpine /usr/bin/unrar
 
 # ports and volumes
-EXPOSE 8081
-EXPOSE 9091
-EXPOSE 51820/udp
+EXPOSE 8081 9091 51820/udp
 VOLUME /config
