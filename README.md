@@ -16,8 +16,7 @@ The assumption is that you know how to build docker containers from a Dockerfile
 Ensure that the directory structure referenced by the `-v` volume mounts in the shell script are  present on your system.
 
 So for the docker shell script example here `start-sickcont.sh`, you'd need to create the following directories under the config directory in this repo:
-- `mkdir config/data`
-- `mkdir config/tv`
+- `mkdir config/{data,tv}`
 
 ## Shell scripts
 
