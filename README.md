@@ -20,15 +20,15 @@ So for the docker shell script example here `start-sickcont.sh`, you'd need to c
 
 ## Shell scripts
 
-The following sections contain example shell scripts to launch the docker/podman container. Make sure you check the following for your particular system/scenario:
+The example shell scripts to launch the docker/podman container will likely need to be changed. Make sure you check the following for your particular system/scenario:
 - volume mounts
 - UID of the user on your docker host system should match the `-e PUID` in the script 
 - GID of the primary group of your user on your docker host system should match the `-e PGID` in the script 
 - Ensure the name of the docker container matches with the name of the docker container you tagged your container with at build time
 
-### Shell script for podman on Fedora
+## WireGuard config example for podman on Fedora
 
-The following is a shell script that will work with podman on Fedora:
+The following is a WireGuard conf file that should work with podman on Fedora 38/39:
 
 ```
 [Interface]
@@ -43,7 +43,7 @@ Endpoint = [wg_endpoint:port]
 
 ### Shell script for docker
 
-The following is a shell script that work with docker (only tested on macOS with Apple Silicon).
+The following is a WireGuard conf file example that should work with docker (only tested on macOS with Apple Silicon).
 
 ```
 [Interface]
