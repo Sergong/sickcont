@@ -26,7 +26,11 @@ The example shell scripts to launch the docker/podman container will likely need
 - GID of the primary group of your user on your docker host system should match the `-e PGID` in the script 
 - Ensure the name of the docker container matches with the name of the docker container you tagged your container with at build time
 
-## WireGuard config example for podman on Fedora
+## WireGuard Conf file Examples
+
+Your WireGuard conf file should be stored in the `config/wg_confs` directory as `[any_name].conf`.
+
+### WireGuard config example for podman on Fedora
 
 The following is a WireGuard conf file that should work with podman on Fedora 38/39:
 
