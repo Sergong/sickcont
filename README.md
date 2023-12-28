@@ -42,7 +42,7 @@ DNS = [dns_server_ip_list delimited with comma]
 [Peer]
 PublicKey = [endpoint_pubkey]
 AllowedIPs = 0.0.0.0/0
-Endpoint = [wg_endpoint:port]
+Endpoint = [wg_endpoint:51820]
 ```
 
 ### Shell script for docker
@@ -60,5 +60,5 @@ PreDown = /etc/wireguard/pre-down.s
 [Peer]
 PublicKey = [endpoint_pubkey]
 AllowedIPs = 0.0.0.0/0
-Endpoint = [wg_endpoint:port]
+Endpoint = [wg_endpoint:51820]
 ```
