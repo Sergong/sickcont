@@ -37,12 +37,12 @@ The following is a WireGuard conf file that should work with podman on Fedora 38
 ```
 [Interface]
 Address = [client_ip_address]
-PrivateKey = [client privkey]
+PrivateKey = [client_privkey]
 DNS = [dns_server_ip_list delimited with comma]
 [Peer]
 PublicKey = [endpoint_pubkey]
 AllowedIPs = 0.0.0.0/0
-Endpoint = [wg_endpoint:51820]
+Endpoint = [wg_endpoint_ip:51820]
 ```
 
 ### Shell script for docker
@@ -52,7 +52,7 @@ The following is a WireGuard conf file example that should work with docker (onl
 ```
 [Interface]
 Address = [client_ip_address]
-PrivateKey = [client privkey]
+PrivateKey = [client_privkey]
 DNS = [dns_server_ip_list delimited with comma]
 PostUp = /etc/wireguard/post-up.sh
 PreDown = /etc/wireguard/pre-down.s
@@ -60,5 +60,5 @@ PreDown = /etc/wireguard/pre-down.s
 [Peer]
 PublicKey = [endpoint_pubkey]
 AllowedIPs = 0.0.0.0/0
-Endpoint = [wg_endpoint:51820]
+Endpoint = [wg_endpoint_ip:51820]
 ```
