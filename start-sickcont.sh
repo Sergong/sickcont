@@ -10,9 +10,10 @@ docker run -d \
   -e TZ=Etc/UTC \
   -p 51820:51820/udp \
   -p 8081:8081 \
-  -v ./config:/config:z \
-  -v /home/smeeuwsen/Downloads:/downloads:z \
-  -v /home/smeeuwsen/Videos/TV:/tv:z \
+  -p 9091:9091 \
+  -v ./config:/config \
+  -v ./config/data:/downloads \
+  -v ./config/tv:/tv \
   --sysctl="net.ipv4.conf.all.src_valid_mark=1" \
   --restart unless-stopped \
-  localhost/smeeuwsen/sickcont:latest
+  docker.io/smeeuwsen/sickcont:latest
